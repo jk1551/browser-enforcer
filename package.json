@@ -1,21 +1,50 @@
 {
   "name": "browser-enforcer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "A package to enforce minimum browser versions in React and Vite projects",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./vite": {
+      "import": "./dist/vite.js",
+      "require": "./dist/vite.cjs",
+      "types": "./dist/vite.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsc"
-  },  
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  }, 
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "browser",
+    "version",
+    "enforcement",
+    "react",
+    "vite"
+  ],
+  "author": "Joseph King",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jk1551/browser-enforcer.git"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
   "devDependencies": {
-    "@types/node": "^20.14.9",
-    "@types/react": "^18.3.3",
-    "typescript": "^5.5.3"
+    "@types/react": "^18.0.0",
+    "typescript": "^4.5.0"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "path": "^0.12.7"
   }
 }
